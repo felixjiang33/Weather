@@ -2,7 +2,7 @@ package flixse.weather.util
 
 import android.text.TextUtils
 import flixse.weather.db.City
-import flixse.weather.db.Country
+import flixse.weather.db.County
 import flixse.weather.db.Province
 import org.json.JSONArray
 import org.json.JSONException
@@ -57,8 +57,8 @@ class Utility {
                     val county = County()
 
                     county.cityId = cityId
-                    county.countryName = countyObject.getString("name")
-                    county.weatherId = countyObject.getInt("weather_id")
+                    county.countyName = countyObject.getString("name")
+                    county.weatherId = countyObject.getString("weather_id")
                     county.save()
                 }
             }catch (e: JSONException){
